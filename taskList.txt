@@ -1,0 +1,19 @@
+1. building a restful web service
+2. scheduling tasks (@Scheduled)
+3. consuming a restful web service (RestTemplate)
+4. accessing relational data using JDBC with spring (JdbcTemplate)
+5. converting a Spring Boot JAR Application to a WAR (<packaging>war</packaging>,  <scope>provided</scope>)
+6. securing a web application
+7. manage and monitor your application with Actuator
+8. uploading files
+9. messaging with redis (订阅发布模式，redisTemplate.convertAndSend; RedisMessageListenerContainer; MessageListenerAdapter)
+   监控消息过期：__keyevent@0__:expired， 0表示0号库， ChannelTopic
+10. save data with redis(RedisTemplate, Jackson2JsonRedisSerializer)
+11. mybatis
+12. transaction (@Transactional(rollbackFor = Exception.class))
+13. messaging with rabbitMQ (rabbitTemplate, setConfirmCallback, setReturnCallback, AcknowledgeMode.MANUAL)
+14. caching data with springboot (配置RedisCacheManager的serializer, @Cacheable, @CachePut, @CacheEvict, @Caching)
+15. elasticsearch
+16. webservice (springboot + cxf)
+17. zookeeper (三种方式：原生，ZKClient, Curator; Curator用的最广泛), 通过curator实现分布式锁
+18. dubbo
