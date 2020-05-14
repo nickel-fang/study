@@ -1,0 +1,29 @@
+.title{
+    float: left;
+    width: 160px;
+    color: white;
+    background: dodgerblue;
+    height: 900px;
+    margin-right: 20px;
+}
+
+.title h1{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.detail_1 h3,.detail_2 h3, p{
+    display: inline;
+}
+
+.detail_1 li, .detail_2 li{
+    display: inline;
+}
+
+h3{
+    margin-bottom: 5px;
+}
