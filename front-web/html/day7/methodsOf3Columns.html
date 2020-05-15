@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container >div{
+            height: 100px;
+        }
+        /* method1: float
+        .left{
+            width:100px;
+            background:green;
+            float:left;
+        }
+        .center{
+            background:yellow;
+            float: left;
+            width: 100px;
+        }
+        .right {
+            background: blue;
+        }*/
+
+        /* method2: position
+        .left{
+            position: absolute;
+            background:green;
+            width: 100px;
+            left: 0;
+        }
+        .center{
+            position: absolute;
+            background:yellow;
+            width: 100px;
+            left: 100px;
+        }
+        .right{
+            position: absolute;
+            background: blue;
+            left: 200px;
+            right: 0;
+        }*/
+
+        /*method3: flex*/
+        /*.container{
+            display: flex;
+        }
+        .left{
+            background:green;
+            width: 100px;
+        }
+        .center{
+            background:yellow;
+            width: 100px;
+        }
+        .right{
+            background: blue;
+            flex-grow: 1;
+        }*/
+
+        /*method4: table*/
+        /*.container{
+            display: table;
+            width: 100%;
+        }
+        .left{
+            display:table-cell;
+            background:green;
+            width: 100px;
+        }
+        .center{
+            display:table-cell;
+            background:yellow;
+            width: 100px;
+        }
+        .right{
+            background: blue;
+            display:table-cell;
+        }*/
+
+        /*method5: grid*/
+        .container{
+            display: grid;
+            grid-template-columns: 100px 100px auto;
+        }
+        .left{
+            background:green;
+        }
+        .center{
+            background:yellow;
+        }
+        .right{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
