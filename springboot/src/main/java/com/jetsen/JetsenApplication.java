@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -29,7 +30,8 @@ import javax.annotation.PreDestroy;
 @EnableScheduling
 @EnableWebSecurity
 @EnableCaching
-@EnableDubbo
+//@EnableDubbo
+@EnableAspectJAutoProxy
 public class JetsenApplication{
     public static void main(String[] args) {
         SpringApplication.run(JetsenApplication.class, args);

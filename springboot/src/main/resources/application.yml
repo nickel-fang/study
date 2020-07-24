@@ -17,7 +17,7 @@ spring:
   #redis configuration
   redis:
     database: 1 #Redis数据库索引（默认为0）
-    host: 192.168.99.100
+    host: 192.168.10.131
     port: 6379
     password:
     max-wait: 300000 #连接池最大阻塞时间（使用负值表示没有限制）
@@ -28,13 +28,13 @@ spring:
     expire-time: 10
   #mysql configuration
   datasource:
-    url: jdbc:mysql://192.168.99.100:3306/db_example?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    username: springuser
-    password: ironpearl
+    url: jdbc:mysql://192.168.10.131:3306/ruoyi?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: ryuser
+    password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
   #rabbitMQ configuration
   rabbitmq:
-    host: 192.168.99.100
+    host: 192.168.10.131
     port: 5672
     username: nickel
     password: ironpearl
@@ -51,7 +51,7 @@ spring:
       time-to-live: 600000
 
 es:
-  host: 192.168.99.100
+  host: 192.168.10.131
   port: 9200
   scheme: http
 
@@ -60,8 +60,8 @@ mybatis:
 
 apache:
   zookeeper:
-    #host: 192.168.99.100:2181,192.168.99.100:2182,192.168.99.100:2183
-    host: 192.168.99.100:2181
+    #host: 192.168.10.131:2181,192.168.10.131:2182,192.168.10.131:2183
+    host: 192.168.10.131:2181
     maxRetry: 3
     sessionTimeout: 600000
     connectionTimeout: 10000
@@ -72,7 +72,7 @@ dubbo:
   application:
     name: dubbo-service-provider
   registry:
-    address: zookeeper://192.168.99.100:2181?backup=192.168.99.100:2182,192.168.99.100:2183
+    address: zookeeper://192.168.10.131:2181?backup=192.168.10.39:2181,192.168.10.44:2181
   protocol:
     name: dubbo
     port: 20880

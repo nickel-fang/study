@@ -6,7 +6,7 @@ bin/
 !.mvn/wrapper/maven-wrapper.jar
 .DS_Store
 */.DS_Store
-#application.*
+application.*
 
 ### Node ###
 bower_components
