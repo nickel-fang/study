@@ -11,6 +11,7 @@ import java.io.File;
  */
 public class FileSizeTest {
     public static void main(String[] args) {
+/*        String tt = "123";
         long size = FileUtils.sizeOf(new File("E:\\work/文档/协同处理平台"));
         long size2 = new File("E:\\work\\文档\\协同处理平台").length();
         System.out.println(size / 1024 / 1024);
@@ -26,6 +27,8 @@ public class FileSizeTest {
         long totalSpace = file.getTotalSpace();
         int space = (int) (totalSpace / 1024 / 1024 / 1024);
         System.out.println(totalSpace);
-        System.out.println(space);
+        System.out.println(space);*/
+
+        System.out.println("100000000/100000000/100000000/100000000/100000000/100000000/100000000/100000000/100000000/100000000".length());
     }
 }

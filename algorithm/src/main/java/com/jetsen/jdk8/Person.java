@@ -1,11 +1,18 @@
 package com.jetsen.jdk8;
 
+import java.util.Optional;
 import java.util.Random;
 
 public class Person {
     String name;
     int age;
     int score;
+
+    public Optional<Car> getCar() {
+        return car;
+    }
+
+    private Optional<Car> car;
 
     public Person() {
     }
