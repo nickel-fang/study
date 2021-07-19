@@ -11,7 +11,7 @@
     <modules>
         <module>algorithm</module>
         <module>springboot</module>
-        <module>dubbo-client</module>
+        <module>designPattern</module>
     </modules>
 
     <parent>
