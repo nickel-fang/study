@@ -12,6 +12,7 @@
         <module>algorithm</module>
         <module>springboot</module>
         <module>designPattern</module>
+        <module>j2se</module>
     </modules>
 
     <parent>
