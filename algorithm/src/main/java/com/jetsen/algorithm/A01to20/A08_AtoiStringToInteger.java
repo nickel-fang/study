@@ -13,21 +13,21 @@ public class A08_AtoiStringToInteger {
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (48 <= c && c <= 57) {  //numerical digit
-                if (!isMinus && (result > Integer.MAX_VALUE / 10 || result == Integer.MAX_VALUE / 10 && c - 48 > 7))
+            if ('0' <= c && c <= '9') {  //numerical digit
+                if (!isMinus && (result > Integer.MAX_VALUE / 10 || result == Integer.MAX_VALUE / 10 && c - '0' > 7))
                     return Integer.MAX_VALUE;
-                if (isMinus && (-result < Integer.MIN_VALUE / 10 || -result == Integer.MIN_VALUE / 10 && -(c - 48) < -8))
+                if (isMinus && (-result < Integer.MIN_VALUE / 10 || -result == Integer.MIN_VALUE / 10 && -(c - '0') < -8))
                     return Integer.MIN_VALUE;
-                result = result * 10 + (c - 48);
+                result = result * 10 + (c - '0');
                 isStartWithNumber = true;
-            } else if (!isStartWithNumber && c == 32 && !isHasSign) { //空格
+            } else if (!isStartWithNumber && c == ' ' && !isHasSign) { //空格
                 continue;
-            } else if (c == 45 && !isStartWithNumber && !isHasSign) { // 负号
+            } else if (c == '-' && !isStartWithNumber && !isHasSign) { // 负号
                 isMinus = true;
                 isHasSign = true;
-            } else if (c == 43 && !isStartWithNumber && !isHasSign) { //正号
+            } else if (c == '+' && !isStartWithNumber && !isHasSign) { //正号
                 isHasSign = true;
-            } else if (result == 0 && c != 45 && c == 43 && (c < 48 || c > 57)) {
+            } else if (result == 0 && c != '-' && c == '+' && (c < '0' || c > '9')) {
                 return 0;
             } else {
                 break;
