@@ -18,7 +18,30 @@ public class Test {
     @org.junit.jupiter.api.Test
     public void test() {
         assertEquals(maxNumber(new int[]{1, 2, 4, 1, 7, 8, 3}), 15);
-        assertEquals(maxNumber(new int[]{4,1,1,9,1}), 13);
+        assertEquals(maxNumber(new int[]{4, 1, 1, 9, 1}), 13);
+    }
+
+    public int solution(int[] A) {
+        // write your code in Java SE 8
+        int len = A.length;
+        boolean noOne = true;
+        for (int i = 0; i < len; i++) {
+            if (A[i] == 1) noOne = false;
+            if (A[i] <= 0) A[i] = 1;
+        }
+        if (noOne) return 1;
+
+        for (int i = 0; i < len; i++) {
+            int abs = Math.abs(A[i]);
+            if (abs > 0 && abs <= len) {
+                A[abs - 1] = -Math.abs(A[abs - 1]);
+            }
+        }
+
+        for (int i = 0; i < len; i++) {
+            if (A[i] > 0) return i + 1;
+        }
+        return len + 1;
     }
 
 }
